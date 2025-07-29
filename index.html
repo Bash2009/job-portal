@@ -112,6 +112,7 @@
 
       <!--Login section starts here-->
       <div
+        aria-hidden="false"
         class="modal fade"
         id="login"
         data-backdrop="static"
@@ -176,6 +177,7 @@
         data-backdrop="static"
         data-keyboard="false"
         tabindex="-1"
+        aria-hidden="false"
       >
         <form method="post">
           <div class="modal-dialog modal-dialog-scrollable">
@@ -189,9 +191,9 @@
 
               <div class="modal-body position-relative">
                 <div
-                  class="alert alert-warning alert-dismissible fade fs-6 position-fixed"
+                  class="alert alert-warning alert-dismissible fade fs-6 position-absolute"
                   id="signup-warning"
-                  style="left: 15px; right: 15px"
+                  style="left: 15px; right: 15px; z-index: 100"
                 ></div>
 
                 <div class="d-block mb-3 field-section">
@@ -256,6 +258,7 @@
                     class="form-control my-3 w-100"
                     id="country-field"
                   >
+                    <option value="">(country)</option>
                     <option value="Nigeria">Nigeria</option>
                     <option value="Ghana">Ghana</option>
                     <option value="SA">South Africa</option>
@@ -376,6 +379,8 @@
                 <button
                   type="submit"
                   class="btn btn-dark rounded-pill col-11 mx-auto"
+                  id="signup_submit"
+                  disabled
                 >
                   Sign up
                 </button>
